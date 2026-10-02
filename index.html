@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="screen active" id="screen-1">
+
+    <div class="opening">
+
+      <div class="photo-card opening-photo">
+        <img src="./images/cipaaa1.jpeg" alt="Cipaaa">
+        <span>your girl ♡</span>
+      </div>
+
+      <div class="opening-content">
+
+        <p class="eyebrow">A VERY IMPORTANT SIMULATION</p>
+
+        <h1>
+          Girlfriend<br>
+          <span>Simulator</span>
+        </h1>
+
+        <p class="opening-text">
+          Welcome, boyfriend.<br>
+          Your mission is simple:
+          <strong>survive your girlfriend.</strong>
+        </p>
+
+        <button class="main-button" onclick="goTo(2)">
+          START SIMULATION
+          <span>→</span>
+        </button>
+
+        <p class="tiny-note">
+          made with love by Cipaaa ♡
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="screen" id="screen-2">
+
+    <div class="page">
+
+      <p class="chapter">CHAPTER 01</p>
+
+      <h2>Little Things ♡</h2>
+
+      <p class="subtitle">
+        Choose something for your girlfriend.
+      </p>
+
+      <div class="choice-grid">
+
+        <button class="choice-card" onclick="littleThing(this)">
+          <div class="choice-icon">♡</div>
+          <h3>Give Cipaaa a hug</h3>
+          <p>because she definitely needs one.</p>
+        </button>
+
+        <button class="choice-card" onclick="littleThing(this)">
+          <div class="choice-icon">♡</div>
+          <h3>Give Cipaaa attention</h3>
+          <p>yes, this is very important.</p>
+        </button>
+
+        <button class="choice-card" onclick="littleThing(this)">
+          <div class="choice-icon">♡</div>
+          <h3>Spoil Cipaaa</h3>
+          <p>the correct answer, obviously.</p>
+        </button>
+
+      </div>
+
+      <p id="choice-message" class="choice-message"></p>
+
+      <button
+        id="choice-continue"
+        class="main-button hidden"
+        onclick="goTo(3)"
+      >
+        CONTINUE
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="screen" id="screen-3">
+
+    <div class="page heart-page">
+
+      <p class="chapter">CHAPTER 02</p>
+
+      <h2>Love Check ♡</h2>
+
+      <p class="subtitle">
+        Tap all the hearts to continue.
+      </p>
+
+      <div id="heart-area" class="heart-area"></div>
+
+      <p id="heart-count" class="heart-count">
+        0 / 12 hearts
+      </p>
+
+      <button
+        id="heart-continue"
+        class="main-button hidden"
+        onclick="goTo(4)"
+      >
+        I GOT THEM ALL ♡
+        <span>→</span>
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="screen" id="screen-4">
+
+    <div class="page centered-page">
+
+      <div class="lock-box">
+
+        <div class="lock">🔒</div>
+
+        <p class="chapter">FINAL CHECK</p>
+
+        <h2>One Message Is Locked</h2>
+
+        <p class="subtitle">
+          There's only one way to unlock it.
+        </p>
+
+        <p class="unlock-text">
+          Say it properly.
+        </p>
+
+        <div class="love-input-wrap">
+
+          <input
+            id="love-input"
+            type="text"
+            placeholder="type it here..."
+            autocomplete="off"
+            oninput="checkLoveInput()"
+          >
+
+        </div>
+
+        <button
+          id="unlock-button"
+          class="main-button"
+          onclick="unlockMessage()"
+          disabled
+        >
+          UNLOCK MY MESSAGE
+          <span>♡</span>
+        </button>
+
+        <p id="unlock-error" class="unlock-error"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="screen" id="screen-5">
+
+    <div class="page centered-page">
+
+      <div class="success-heart">
+        ♥
+      </div>
+
+      <p class="chapter">MESSAGE UNLOCKED</p>
+
+      <h2>You made it.</h2>
+
+      <p class="subtitle">
+        Now you can finally read your message.
+      </p>
+
+      <button class="main-button" onclick="goTo(6)">
+        OPEN MY LETTER
+        <span>♡</span>
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="screen" id="screen-6">
+
+    <div class="page letter-page">
+
+      <div class="letter-label">
+        FOR MY FAVORITE PERSON ♡
+      </div>
+
+      <div class="letter-photo">
+        <img src="./images/cipaaa2.jpeg" alt="Cipaaa">
+      </div>
+
+      <h2>Hai, sayang.</h2>
+
+      <div class="letter-content">
+
+        <p>
+          Maaf ya, kamu harus melewati semua challenge dari awal sampai akhir cuma buat sampai ke pesan ini. 😭 Aku sengaja bikin semuanya seperti ini supaya Boyfriend Day kamu kali ini terasa sedikit berbeda dan jadi sesuatu yang bisa kamu ingat.
+        </p>
+
+        <p>
+          Aku juga mau minta maaf kalau selama ini aku masih sering punya banyak kurangnya. Kadang aku bisa manja, cerewet, OVT, atau mungkin bikin kamu bingung menghadapi aku. Tapi terima kasih karena kamu tetap sabar menghadapi semua versi aku.
+        </p>
+
+        <p>
+          Terima kasih sudah mau mendengarkan, menemani, dan tetap ada bahkan ketika aku tidak selalu mudah untuk dipahami. Aku bersyukur banget bisa punya kamu di hidup aku.
+        </p>
+
+        <p>
+          Terima kasih sudah menjadi seseorang yang bisa membuat hari-hariku terasa lebih berwarna, lebih seru, dan punya banyak cerita untuk dikenang.
+        </p>
+
+        <p>
+          Aku berharap ke depannya kita masih bisa bikin banyak kenangan kecil, ketawa karena hal-hal receh, saling ganggu, dan terus tumbuh bareng dengan cara kita sendiri.
+        </p>
+
+        <p>
+          <strong>
+            Happy Boyfriend Day, sayang. ❤️
+          </strong>
+        </p>
+
+        <p>
+          Terima kasih sudah menjadi <strong>cowoku</strong>.
+          I love you, my favorite person.
+        </p>
+
+        <p>
+          Dan kalau setelah melewati semua level ini kamu masih memilih aku, berarti kamu resmi mendapatkan subscription seumur hidup.
+          <strong>No refund, no cancellation. 😭❤️</strong>
+        </p>
+
+      </div>
+
+      <div class="letter-sign">
+        — your girl, Cipaaa ♡
+      </div>
+
+      <button class="main-button" onclick="restartWebsite()">
+        PLAY AGAIN
+        <span>↻</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
